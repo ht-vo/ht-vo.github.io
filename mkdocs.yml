@@ -1,0 +1,80 @@
+site_name: Thanh's Blog
+site_author: Thanh VO
+site_description: Personal Blog
+site_url: https://ht-vo.github.io
+copyright: '&copy; 2025 Thanh VO'
+
+repo_name: ht-vo/ht-vo.github.io
+repo_url: https://github.com/ht-vo/ht-vo.github.io
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+plugins:
+  - blog:
+      blog_dir: blog
+      post_dir: "{blog}/articles"
+      authors: true
+      authors_file: "{blog}/.authors.yml"
+      archive_date_format: yyyy-MM
+  - search:
+      enabled: true
+
+theme:
+  name: material
+  language: en
+  features:
+    # Navigation Menu
+    - navigation.tabs
+    # Side Menu
+    - navigation.sections
+    - navigation.indexes
+    - navigation.expand
+    # Search Menu
+    - search.highlight
+    - search.suggest
+    # Page
+    - navigation.top
+    - navigation.tracking
+    # Code Block
+    - content.code.copy
+    - content.tabs.link
+    # Footer
+    - navigation.footer
+  icon:
+    logo: simple/zcool
+    repo: fontawesome/brands/github
+  palette:
+    primary: blue grey
+  font:
+    code: Fira Code
+
+nav:
+  - Home: index.md
+  - Blog:
+    - blog/index.md
+  - Home Lab:
+    - Gear (edition 2025): 01-homelab/articles/setup-2025.md
+  - Knowledge Base:
+    - Hardware:
+      - Sparkle Arc A310 Fan Issue: 02-knowledgebase/articles/hardware/intel-arc-a310-fan-issue.md
+  - About me:
+    - 00-about-me/about-me.md
+
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:hello@htvo.fr
+    - icon: fontawesome/brands/github
+      link: https://github.com/ht-vo
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/htvo/
