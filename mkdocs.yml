@@ -12,7 +12,11 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -67,6 +71,8 @@ nav:
   - Knowledge Base:
     - Hardware:
       - Sparkle Arc A310 Fan Issue: 02-knowledgebase/articles/hardware/intel-arc-a310-fan-issue.md
+    - TrueNAS:
+      - Things To Do After Installing TrueNAS: 02-knowledgebase/articles/truenas/things-to-do-after-installing-truenas.md
   - About me:
     - 00-about-me/about-me.md
 
